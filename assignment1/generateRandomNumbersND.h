@@ -35,4 +35,23 @@ void generateNDAndWriteToFile(const char *fileName, double mean = MEAN, double s
     }
 }
 
+void generateNDBetweenZeroAndOne(const char *fileName, double mean = MEAN, double stddev = STANDARD_DEVIATION, int total = TOTAL_ND)
+{
+    generateNDAndWriteToFile(fileName, mean, stddev, total);
+
+    // std::ofstream FILE(fileName);
+
+    // if (FILE.is_open())
+    // {
+    //     int i = total;
+    //     while (i--)
+    //     {
+    //         double dd = generateRandomNumberND(mean, stddev);
+    //         FILE << dd << "\n";
+    //     }
+
+    //     FILE.close();
+    // }
+}
+
 #endif

@@ -31,4 +31,18 @@ void generateUDAndWriteToFile(const char * fileName, int minimum=MINIMUM_UD_RANG
 	}
 }
 
+void generateUDBetweenZeroAndOne(const char * fileName, int minimum=MINIMUM_UD_RANGE, int maximum=MAXIMUM_UD_RANGE, int total=TOTAL_UD){
+	std::ofstream FILE(fileName);
+	
+	if(FILE.is_open()){
+		int i = total;
+		while(i--){
+			int integer = generateRandomInteger(minimum, maximum);
+			FILE << float(integer) / float(maximum) << "\n";		
+		}
+		
+		FILE.close();
+	}
+}
+
 #endif
