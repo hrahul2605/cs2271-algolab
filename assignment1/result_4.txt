@@ -1,0 +1,18 @@
+Time Taken for sorting UD Data set using Randomized Quick Sort,  1 run 0.701921 seconds No. of operations: 43808003
+Time Taken for sorting UD Data set using Randomized Quick Sort,  1 run 0.65666 seconds No. of operations: 38832118
+Time Taken for sorting UD Data set using Randomized Quick Sort,  1 run 0.667238 seconds No. of operations: 41078164
+Time Taken for sorting UD Data set using Randomized Quick Sort,  1 run 0.677282 seconds No. of operations: 41593221
+Time Taken for sorting UD Data set using Randomized Quick Sort,  1 run 0.644558 seconds No. of operations: 39499401
+
+
+Time Taken for sorting UD Data set using Randomized Quick Sort, 5 runs 0.669532 seconds Avg. No. of operations: 40962181
+
+Time Taken for sorting ND Data set using Randomized Quick Sort,  1 run 0.652065 seconds No. of operations: 40846932
+Time Taken for sorting ND Data set using Randomized Quick Sort,  1 run 0.663314 seconds No. of operations: 39817325
+Time Taken for sorting ND Data set using Randomized Quick Sort,  1 run 0.687976 seconds No. of operations: 39067541
+Time Taken for sorting ND Data set using Randomized Quick Sort,  1 run 0.702709 seconds No. of operations: 38632151
+Time Taken for sorting ND Data set using Randomized Quick Sort,  1 run 0.69373 seconds No. of operations: 39543906
+
+
+Time Taken for sorting ND Data set using Randomized Quick Sort, 5 runs 0.679959 seconds Avg. No. of operations: 39581571
+

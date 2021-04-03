@@ -1,0 +1,2 @@
+Average Time Taken for sorting UD Data set using Quick Sort, 5 runs 0.162393 seconds.
+Average Time Taken for sorting ND Data set using Quick Sort, 5 runs 0.33464 seconds.
