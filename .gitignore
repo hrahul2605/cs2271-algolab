@@ -1,4 +1,6 @@
 large_data_set.txt
 merge_sorted.txt
 quick_sorted.txt
+data_set_between_0_1.txt
+nd_data_set.txt
 *.out

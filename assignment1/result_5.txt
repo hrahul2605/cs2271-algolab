@@ -1,1 +1,2 @@
-Avg. Time Taken for sorting UD Data set using Merge Sort, 10 runs 0.0368992 seconds 
+Avg. Time Taken for sorting UD Data set using Merge Sort, 5 runs 0.0321886 seconds 
+Avg. Time Taken for sorting ND Data set using Merge Sort, 5 runs 0.0319188 seconds 

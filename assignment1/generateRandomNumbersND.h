@@ -4,6 +4,8 @@
 const double MEAN = 7000.0;
 const double STANDARD_DEVIATION = 2000.0;
 const int TOTAL_ND = int(1e6);
+const double MAX_ND_VAL = 10000.00;
+const double MIN_ND_VAL = 0.00;
 
 #include <iostream>
 #include <random>
@@ -37,21 +39,28 @@ void generateNDAndWriteToFile(const char *fileName, double mean = MEAN, double s
 
 void generateNDBetweenZeroAndOne(const char *fileName, double mean = MEAN, double stddev = STANDARD_DEVIATION, int total = TOTAL_ND)
 {
-    generateNDAndWriteToFile(fileName, mean, stddev, total);
+    std::ofstream FILE(fileName);
 
-    // std::ofstream FILE(fileName);
+    if (FILE.is_open())
+    {
+        int i = total;
+        while (i--)
+        {
+            double dd;
+            bool key = true;
+            while (key)
+            {
+                dd = generateRandomNumberND(mean, stddev);
 
-    // if (FILE.is_open())
-    // {
-    //     int i = total;
-    //     while (i--)
-    //     {
-    //         double dd = generateRandomNumberND(mean, stddev);
-    //         FILE << dd << "\n";
-    //     }
+                if (dd >= MIN_ND_VAL && dd <= MAX_ND_VAL)
+                    key = false;
+            }
 
-    //     FILE.close();
-    // }
+            FILE << dd / MAX_ND_VAL << "\n";
+        }
+
+        FILE.close();
+    }
 }
 
 #endif
