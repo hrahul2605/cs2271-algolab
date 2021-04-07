@@ -7,7 +7,7 @@
 
 using namespace std;
 
-const int TOTAL_RUNS = 5;
+const int TOTAL_RUNS = 20;
 
 double run(bool fromUD)
 {
