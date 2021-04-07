@@ -45,31 +45,39 @@ double run(bool fromUD)
 int main()
 {
 
-    string resultFileName = "result_5.txt";
+    string resultFileName = "Result6.csv";
     ofstream FILE;
     FILE.open(resultFileName);
     double total_time_taken = 0.0;
     for (int i = 0; i < TOTAL_RUNS; i++)
         total_time_taken += run(true);
 
-    FILE << "Avg. Time Taken for sorting UD Data set using Merge Sort, ";
+    // FILE << "Avg. Time Taken for sorting UD Data set using Merge Sort, ";
+    // FILE << TOTAL_RUNS;
+    // FILE << " runs ";
+    // FILE << total_time_taken / TOTAL_RUNS;
+    // FILE << " seconds ";
+    // FILE << "\n";
+    FILE << "Total Runs, Average Time, Data Set\n";
     FILE << TOTAL_RUNS;
-    FILE << " runs ";
+    FILE << ",";
     FILE << total_time_taken / TOTAL_RUNS;
-    FILE << " seconds ";
-    FILE << "\n";
+    FILE << ",Uniform Distribution\n";
 
     total_time_taken = 0.0;
     for (int i = 0; i < TOTAL_RUNS; i++)
         total_time_taken += run(false);
 
-    FILE << "Avg. Time Taken for sorting ND Data set using Merge Sort, ";
+    // FILE << "Avg. Time Taken for sorting ND Data set using Merge Sort, ";
+    // FILE << TOTAL_RUNS;
+    // FILE << " runs ";
+    // FILE << total_time_taken / TOTAL_RUNS;
+    // FILE << " seconds ";
+    // FILE << "\n";
     FILE << TOTAL_RUNS;
-    FILE << " runs ";
+    FILE << ",";
     FILE << total_time_taken / TOTAL_RUNS;
-    FILE << " seconds ";
-    FILE << "\n";
-
+    FILE << ",Normal Distribution\n";
     FILE.close();
 
     return 0;
