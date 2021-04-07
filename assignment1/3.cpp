@@ -54,28 +54,35 @@ int main()
 {
     string writeFile = "large_data_set.txt";
     ofstream FILE;
-    FILE.open("result_3.txt");
+    FILE.open("Result3_UD.csv");
 
     cout << "Generating Random Numbers from Uniform Distribution.\n";
     generateUDAndWriteToFile(writeFile.c_str());
 
     long long int index = 2;
 
+    FILE << "Using Merge Sort,,\n";
+    FILE << "Number of elements,Time Taken, Operations\n";
     for (int i = 1; i < MAX_POW; i++)
     {
         int size = pow(2, i);
         long long int count = 0;
         double totalTimeTaken = 0.0;
         totalTimeTaken = runSort<int>(writeFile.c_str(), size, count, true);
-        FILE << "Time Taken for sorting UD Data set using Merge Sort, ";
+        // FILE << "Time Taken for sorting UD Data set using Merge Sort, ";
         FILE << size;
-        FILE << " elements ";
-        FILE << totalTimeTaken;
-        FILE << " seconds ";
-        FILE << "No. of operations: ";
+        FILE << ",";
+        // FILE << " elements ";
+        FILE << totalTimeTaken * 1e4;
+        FILE << ",";
+        // FILE << " seconds ";
+        // FILE << "No. of operations: ";
         FILE << count;
         FILE << "\n";
     }
+
+    FILE << "Using Quick Sort,,\n";
+    FILE << "Number of elements,Time Taken, Operations\n";
 
     index = 2;
 
@@ -85,19 +92,25 @@ int main()
         long long int count = 0;
         double totalTimeTaken = 0.0;
         totalTimeTaken = runSort<int>(writeFile.c_str(), size, count, false);
-        FILE << "Time Taken for sorting UD Data set using Quick Sort, ";
+        // FILE << "Time Taken for sorting UD Data set using Quick Sort, ";
         FILE << size;
-        FILE << " elements ";
-        FILE << totalTimeTaken;
-        FILE << " seconds ";
-        FILE << "No. of operations: ";
+        FILE << ",";
+        // FILE << " elements ";
+        FILE << totalTimeTaken * 1e4;
+        FILE << ",";
+        // FILE << " seconds ";
+        // FILE << "No. of operations: ";
         FILE << count;
         FILE << "\n";
     }
 
     cout << "Generating Random Numbers from Normal Distribution.\n";
     generateNDAndWriteToFile(writeFile.c_str());
+    FILE.close();
+    FILE.open("Result3_ND.csv");
 
+    FILE << "Using Merge Sort,,\n";
+    FILE << "Number of elements,Time Taken, Operations\n";
     index = 2;
 
     for (int i = 1; i < MAX_POW; i++)
@@ -106,30 +119,36 @@ int main()
         long long int count = 0;
         double totalTimeTaken = 0.0;
         totalTimeTaken = runSort<float>(writeFile.c_str(), size, count, true);
-        FILE << "Time Taken for sorting ND Data set using Merge Sort, ";
+        // FILE << "Time Taken for sorting ND Data set using Merge Sort, ";
         FILE << size;
-        FILE << " elements ";
-        FILE << totalTimeTaken;
-        FILE << " seconds ";
-        FILE << "No. of operations: ";
+        FILE << ",";
+        // FILE << " elements ";
+        FILE << totalTimeTaken * 1e4;
+        FILE << ",";
+        // FILE << " seconds ";
+        // FILE << "No. of operations: ";
         FILE << count;
         FILE << "\n";
     }
 
     index = 2;
 
+    FILE << "Using Quick Sort,,\n";
+    FILE << "Number of elements,Time Taken, Operations\n";
     for (int i = 1; i < MAX_POW; i++)
     {
         int size = pow(2, i);
         long long int count = 0;
         double totalTimeTaken = 0.0;
         totalTimeTaken = runSort<float>(writeFile.c_str(), size, count, false);
-        FILE << "Time Taken for sorting ND Data set using Quick Sort, ";
+        // FILE << "Time Taken for sorting UD Data set using Merge Sort, ";
         FILE << size;
-        FILE << " elements ";
-        FILE << totalTimeTaken;
-        FILE << " seconds ";
-        FILE << "No. of operations: ";
+        FILE << ",";
+        // FILE << " elements ";
+        FILE << totalTimeTaken * 1e4;
+        FILE << ",";
+        // FILE << " seconds ";
+        // FILE << "No. of operations: ";
         FILE << count;
         FILE << "\n";
     }
