@@ -30,7 +30,8 @@ double run(bool fromUD)
     readFromFileToArray<float>(array, size, fileName.c_str());
     cout << "Starting Bucket sort.\n";
     start = clock();
-    bucketSort(array, size);
+    int count = 0;
+    bucketSort(array, size, &count);
     end = clock();
 
     cout << "Starting to check for Correctness\n";
